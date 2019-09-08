@@ -95,7 +95,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/timebtn"
-            android:layout_width="60dp"
+            android:layout_width="70dp"
             android:layout_height="60dp"
             android:layout_marginEnd="16dp"
             android:text="Time"
@@ -137,7 +137,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/datebtn"
-            android:layout_width="60dp"
+            android:layout_width="70dp"
             android:layout_height="60dp"
             android:layout_gravity="right"
             android:layout_marginEnd="16dp"
@@ -156,7 +156,7 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/cancelbtn"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:text="Cancel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -169,7 +169,7 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/savebtn"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:text="Save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

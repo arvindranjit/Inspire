@@ -32,7 +32,7 @@
                 android:layout_marginTop="8dp"
                 android:text="Finish the Python Course"
                 android:textColor="#ffffff"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -45,7 +45,7 @@
                 android:layout_marginEnd="8dp"
                 android:textColor="#ffffff"
                 android:text="Due by 6:03 pm"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 app:layout_constraintBottom_toTopOf="@+id/datestamp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/label" />
@@ -59,7 +59,7 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
                 android:text="Friday, September 6 2019"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/label"

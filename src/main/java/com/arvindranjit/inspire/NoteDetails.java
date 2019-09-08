@@ -158,7 +158,7 @@ public class NoteDetails extends AppCompatActivity implements TimePickerDialog.O
 
         }
 
-        textView.setText(mHour + " : " + minutes + " " + ap);
+        textView.setText(mHour + ":" + minutes + " " + ap);
         timeflag = 1;
     }
 
