@@ -48,6 +48,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
 
+
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nestedScrollView"
         android:layout_width="match_parent"
@@ -73,8 +74,17 @@
 
 
 
-
     </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="No Goals yet. Plan something new!"
+        android:id="@+id/nogoalstextview"
+        android:gravity="center"
+        android:elevation="3dp"
+        android:visibility="gone"
+        android:textSize="15sp"/>
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

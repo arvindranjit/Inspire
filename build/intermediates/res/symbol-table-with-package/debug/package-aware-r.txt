@@ -1490,6 +1490,7 @@ id datestamp
 id datetextview
 id decor_content_parent
 id default_activity_button
+id deletebtn
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -1579,6 +1580,7 @@ id navigation_header_container
 id nestedScrollView
 id never
 id noScroll
+id nogoalstextview
 id none
 id normal
 id notification_background
@@ -1608,7 +1610,7 @@ id rounded
 id save_image_matrix
 id save_non_transition_alpha
 id save_scale_type
-id savebtn
+id savetextview
 id scale
 id screen
 id scroll

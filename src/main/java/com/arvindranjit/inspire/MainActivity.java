@@ -28,7 +28,8 @@ public class MainActivity extends AppCompatActivity {
     private List<Todo> todosList = new ArrayList<>();
     private CoordinatorLayout coordinatorLayout;
     private RecyclerView recyclerView;
-    private TextView noNotesView;
+    private TextView nogoalsTextView;
+
 
     private DatabaseHelper db;
 
@@ -44,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
         coordinatorLayout = findViewById(R.id.coordinator_layout);
         recyclerView = findViewById(R.id.recyclerview);
-        noNotesView = findViewById(R.id.empty_notes_view);
+        nogoalsTextView = findViewById(R.id.nogoalstextview);
 
 
         db = new DatabaseHelper(this);
@@ -98,6 +99,7 @@ public class MainActivity extends AppCompatActivity {
                 todosList.removeAll(todosList);
                 todosList.addAll(db.getAllNotes());
                 mAdapter.notifyDataSetChanged();
+                toggleEmptyGoals();
                 //mAdapter.notifyItemChanged(position);
 
 
@@ -119,10 +121,19 @@ public class MainActivity extends AppCompatActivity {
         todosList.removeAll(todosList);
         todosList.addAll(db.getAllNotes());
         mAdapter.notifyDataSetChanged();
+        toggleEmptyGoals();
 
     }
 
+    private void toggleEmptyGoals() {
 
+
+        if (db.getNotesCount() > 0) {
+            nogoalsTextView.setVisibility(View.GONE);
+        } else {
+            nogoalsTextView.setVisibility(View.VISIBLE);
+        }
+    }
 
 
 
