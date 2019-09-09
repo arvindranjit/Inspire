@@ -105,7 +105,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         // Select All Query
         String selectQuery = "SELECT  * FROM " + Todo.TABLE_NAME + " ORDER BY " +
-                Todo.COLUMN_TIMESTAMP + " DESC";
+                Todo.COLUMN_STATUS + " ASC ," +Todo.COLUMN_TIMESTAMP + " DESC";
 
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);

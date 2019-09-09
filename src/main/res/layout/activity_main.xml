@@ -57,9 +57,7 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+
 
 
             <androidx.recyclerview.widget.RecyclerView
@@ -73,17 +71,10 @@
             </androidx.recyclerview.widget.RecyclerView>
 
 
-        </LinearLayout>
+
 
 
     </androidx.core.widget.NestedScrollView>
-
-
-
-
-
-
-
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -92,7 +83,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
-
         android:src="@drawable/ic_add_black_24dp" />
 
 

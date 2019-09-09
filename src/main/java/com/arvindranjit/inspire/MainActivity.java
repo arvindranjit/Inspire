@@ -4,6 +4,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.core.view.ViewCompat;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -66,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(mAdapter);
-
+        ViewCompat.setNestedScrollingEnabled(recyclerView, false);
 
 
 
@@ -82,11 +83,23 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onLongClick(View view, int position) {
 
-                db.deleteNote(todosList.get(position));
+
+                Todo t = todosList.get(position);
+
+                if(t.getStatus()==0){
+                    t.setStatus(1);
+                } else {
+                    t.setStatus(0);
+                }
+
+                db.updateTodo(t);
 
 
-                todosList.remove(position);
-                mAdapter.notifyItemRemoved(position);
+                todosList.removeAll(todosList);
+                todosList.addAll(db.getAllNotes());
+                mAdapter.notifyDataSetChanged();
+                //mAdapter.notifyItemChanged(position);
+
 
             }
         }));

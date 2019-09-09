@@ -58,7 +58,8 @@ public class Todo_Edit extends AppCompatActivity implements TimePickerDialog.OnT
         Button datebutton = (Button) findViewById(R.id.datebtn);
         Button timebutton = (Button) findViewById(R.id.timebtn);
         Button cancelbutton = findViewById(R.id.cancelbtn);
-        Button savebutton = (Button) findViewById(R.id.savebtn);
+        Button deletebutton = (Button) findViewById(R.id.deletebtn);
+        TextView savetextview = findViewById(R.id.savetextview);
         final TextView timetextview = findViewById(R.id.timetextview);
         TextView datetextview = findViewById(R.id.datetextview);
         final TextInputEditText labeledittext = findViewById(R.id.labelTextInputEditText);
@@ -142,7 +143,7 @@ public class Todo_Edit extends AppCompatActivity implements TimePickerDialog.OnT
             }
         });
 
-        savebutton.setOnClickListener(new View.OnClickListener() {
+        savetextview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -223,6 +224,27 @@ public class Todo_Edit extends AppCompatActivity implements TimePickerDialog.OnT
 
 
             });
+
+
+
+
+
+        deletebutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+
+                db.deleteNote(todosList.get(position));
+                todosList.remove(t);
+                finish();
+            }
+
+
+
+        });
+
+
 
 
     }

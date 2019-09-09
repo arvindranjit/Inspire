@@ -96,7 +96,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
 
 
         String time = "Due by " + hoursint + ":" + minutes + " " + ap;
-        holder.timestamp.setText(time);
+
 
 
         Calendar c = Calendar.getInstance();
@@ -104,11 +104,33 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
         c.set(Calendar.MONTH, monthsint);
        c.set(Calendar.DAY_OF_MONTH, daysint);
         String currentDateString = DateFormat.getDateInstance(DateFormat.FULL).format(c.getTime());
-        holder.datestamp.setText(currentDateString);
 
-        Colour_Picker mcolour_picker = new Colour_Picker();
-        int[] gColors = mcolour_picker.getGcolors(colour);
-        int colour1 = gColors[0];
+
+
+        if(todo.getStatus()==0) {
+            holder.timestamp.setText(time);
+            holder.datestamp.setText(currentDateString);
+        } else {
+
+            holder.timestamp.setText("Completed");
+            holder.datestamp.setText("");
+        }
+
+
+        if(todo.getStatus()==0) {
+
+            Colour_Picker mcolour_picker = new Colour_Picker();
+            int[] gColors = mcolour_picker.getGcolors(colour);
+            int colour1 = gColors[0];
+            holder.constraintLayout.setBackgroundColor(colour1);
+        } else{
+
+            Colour_Picker mcolour_picker = new Colour_Picker();
+            int[] gColors = mcolour_picker.getGcolors(17);
+            int colour1 = gColors[0];
+            holder.constraintLayout.setBackgroundColor(colour1);
+
+        }
 
 
 
@@ -119,7 +141,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
         gd2.setCornerRadius(100); */
 
 
-        holder.constraintLayout.setBackgroundColor(colour1);
+
 
 
 

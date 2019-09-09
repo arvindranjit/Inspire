@@ -9,6 +9,7 @@
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:statusBarColor">#FFFFFF</item>
 
+
     </style>
 
     <style name="AppTheme.NoActionBar">

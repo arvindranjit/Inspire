@@ -17,6 +17,8 @@ import android.widget.Toast;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textview.MaterialTextView;
 
+import org.w3c.dom.Text;
+
 import java.text.DateFormat;
 import java.util.Calendar;
 import java.util.Random;
@@ -39,7 +41,8 @@ public class NoteDetails extends AppCompatActivity implements TimePickerDialog.O
 
         Button datebutton = (Button) findViewById(R.id.datebtn);
         Button timebutton = (Button) findViewById(R.id.timebtn);
-        Button savebutton = (Button) findViewById(R.id.savebtn);
+        Button cancelbutton = (Button) findViewById(R.id.cancelbtn);
+        TextView savetextview = findViewById(R.id.savetextview);
         TextView timetextview = findViewById(R.id.timetextview);
         TextView datetextview = findViewById(R.id.datetextview);
         final TextInputEditText labeledittext = findViewById(R.id.labelTextInputEditText);
@@ -65,7 +68,7 @@ public class NoteDetails extends AppCompatActivity implements TimePickerDialog.O
             }
         });
 
-        savebutton.setOnClickListener(new View.OnClickListener() {
+        savetextview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -108,7 +111,7 @@ public class NoteDetails extends AppCompatActivity implements TimePickerDialog.O
 
 
                     Random r = new Random();
-                    int color1 = r.nextInt(13);
+                    int color1 = r.nextInt(17);
                     int color2 = r.nextInt(10);
                     int difficultyint = 0;
 
@@ -126,6 +129,14 @@ public class NoteDetails extends AppCompatActivity implements TimePickerDialog.O
                 }
 
 
+            }
+        });
+
+        cancelbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                finish();
             }
         });
 
