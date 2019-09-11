@@ -1380,6 +1380,10 @@
         "source": "C:\\Users\\arvin\\.gradle\\caches\\transforms-2\\files-2.1\\a8c03165c69018fbda4f77f1eb58f4bb\\appcompat-1.1.0-rc01\\res\\anim\\abc_slide_out_bottom.xml"
     },
     {
+        "merged": "C:\\Users\\arvin\\AndroidStudioProjects\\Inspire\\app\\build\\intermediates\\res\\merged\\debug\\drawable_parallax.png.flat",
+        "source": "C:\\Users\\arvin\\AndroidStudioProjects\\Inspire\\app\\src\\main\\res\\drawable\\parallax.png"
+    },
+    {
         "merged": "C:\\Users\\arvin\\AndroidStudioProjects\\Inspire\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_star_half_black_48dp.png.flat",
         "source": "C:\\Users\\arvin\\.gradle\\caches\\transforms-2\\files-2.1\\a8c03165c69018fbda4f77f1eb58f4bb\\appcompat-1.1.0-rc01\\res\\drawable-xxxhdpi-v4\\abc_ic_star_half_black_48dp.png"
     },

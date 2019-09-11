@@ -1379,6 +1379,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable parallax
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -1448,9 +1449,10 @@ id add
 id alertTitle
 id all
 id always
-id appBar
+id appbar
 id async
 id auto
+id backdrop
 id barrier
 id beginning
 id blocking
@@ -1472,6 +1474,7 @@ id clear_text
 id clip_horizontal
 id clip_vertical
 id collapseActionView
+id collapsing_toolbar
 id confirm_button
 id constraintLayout
 id constraintLayout2
@@ -1504,7 +1507,6 @@ id direct
 id disableHome
 id dropdown_menu
 id edit_query
-id empty_notes_view
 id end
 id enterAlways
 id enterAlwaysCollapsed
@@ -1577,7 +1579,6 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id multiply
 id navigation_header_container
-id nestedScrollView
 id never
 id noScroll
 id nogoalstextview
@@ -1601,7 +1602,6 @@ id pin
 id progress_circular
 id progress_horizontal
 id radio
-id recycler_view
 id recyclerview
 id right
 id right_icon
@@ -1919,6 +1919,8 @@ style Animation_AppCompat_DropDownUp
 style Animation_AppCompat_Tooltip
 style Animation_Design_BottomSheetDialog
 style Animation_MaterialComponents_BottomSheetDialog
+style AppBarCollapsed
+style AppBarExpanded
 style AppTheme
 style AppTheme_AppBarOverlay
 style AppTheme_NoActionBar

@@ -17,6 +17,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -42,6 +43,14 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(null);
+
+
+        CollapsingToolbarLayout collapsingToolbar =
+                (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
+        collapsingToolbar.setTitle("Inspire");
+
+        collapsingToolbar.setExpandedTitleTextAppearance(R.style.AppBarExpanded);
+        collapsingToolbar.setCollapsedTitleTextAppearance(R.style.AppBarCollapsed);
 
         coordinatorLayout = findViewById(R.id.coordinator_layout);
         recyclerView = findViewById(R.id.recyclerview);
