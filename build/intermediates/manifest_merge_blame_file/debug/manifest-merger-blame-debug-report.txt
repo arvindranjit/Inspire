@@ -47,8 +47,8 @@
 29        </activity>
 30        <activity
 30-->C:\Users\arvin\AndroidStudioProjects\Inspire\app\src\main\AndroidManifest.xml:21:9-22:57
-31            android:name="com.arvindranjit.inspire.NoteDetails"
-31-->C:\Users\arvin\AndroidStudioProjects\Inspire\app\src\main\AndroidManifest.xml:21:19-46
+31            android:name="com.arvindranjit.inspire.Todo_Add"
+31-->C:\Users\arvin\AndroidStudioProjects\Inspire\app\src\main\AndroidManifest.xml:21:19-43
 32            android:parentActivityName="com.arvindranjit.inspire.MainActivity" />
 32-->C:\Users\arvin\AndroidStudioProjects\Inspire\app\src\main\AndroidManifest.xml:22:13-55
 33        <activity android:name="com.arvindranjit.inspire.MainActivity" >

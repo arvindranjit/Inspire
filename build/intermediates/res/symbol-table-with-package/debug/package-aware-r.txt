@@ -1761,8 +1761,8 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
-layout activity_note_details
 layout activity_todo__edit
+layout activity_todo_add
 layout content_main
 layout content_todo__edit
 layout custom_dialog

@@ -44,7 +44,7 @@ public class Todo_Edit extends AppCompatActivity implements TimePickerDialog.OnT
 
         db = new DatabaseHelper(this);
 
-        todosList.addAll(db.getAllNotes());
+        todosList.addAll(db.getAllTodos());
 
         Intent mIntent = getIntent();
         position = mIntent.getIntExtra("position", 0);

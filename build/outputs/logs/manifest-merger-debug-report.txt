@@ -88,12 +88,12 @@ ADDED from C:\Users\arvin\AndroidStudioProjects\Inspire\app\src\main\AndroidMani
 		ADDED from C:\Users\arvin\AndroidStudioProjects\Inspire\app\src\main\AndroidManifest.xml:19:17-70
 	android:name
 		ADDED from C:\Users\arvin\AndroidStudioProjects\Inspire\app\src\main\AndroidManifest.xml:18:17-63
-activity#com.arvindranjit.inspire.NoteDetails
+activity#com.arvindranjit.inspire.Todo_Add
 ADDED from C:\Users\arvin\AndroidStudioProjects\Inspire\app\src\main\AndroidManifest.xml:21:9-22:57
 	android:parentActivityName
 		ADDED from C:\Users\arvin\AndroidStudioProjects\Inspire\app\src\main\AndroidManifest.xml:22:13-55
 	android:name
-		ADDED from C:\Users\arvin\AndroidStudioProjects\Inspire\app\src\main\AndroidManifest.xml:21:19-46
+		ADDED from C:\Users\arvin\AndroidStudioProjects\Inspire\app\src\main\AndroidManifest.xml:21:19-43
 activity#com.arvindranjit.inspire.MainActivity
 ADDED from C:\Users\arvin\AndroidStudioProjects\Inspire\app\src\main\AndroidManifest.xml:23:9-29:20
 	android:name

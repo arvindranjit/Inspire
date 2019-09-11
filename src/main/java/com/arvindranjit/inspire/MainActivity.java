@@ -1,6 +1,5 @@
 package com.arvindranjit.inspire;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
@@ -10,13 +9,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -30,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private CoordinatorLayout coordinatorLayout;
     private RecyclerView recyclerView;
     private TextView nogoalsTextView;
-
+    private  CollapsingToolbarLayout collapsingToolbar;
 
     private DatabaseHelper db;
 
@@ -45,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(null);
 
 
-        CollapsingToolbarLayout collapsingToolbar =
+        collapsingToolbar =
                 (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
         collapsingToolbar.setTitle("Inspire");
 
@@ -59,14 +57,15 @@ public class MainActivity extends AppCompatActivity {
 
         db = new DatabaseHelper(this);
 
-        todosList.addAll(db.getAllNotes());
+        todosList.addAll(db.getAllTodos());
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent newIntent = new Intent(MainActivity.this, NoteDetails.class);
+                Intent newIntent = new Intent(MainActivity.this, Todo_Add.class);
                 MainActivity.this.startActivity(newIntent);
+
 
 
             }
@@ -106,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                 todosList.removeAll(todosList);
-                todosList.addAll(db.getAllNotes());
+                todosList.addAll(db.getAllTodos());
                 mAdapter.notifyDataSetChanged();
                 toggleEmptyGoals();
                 //mAdapter.notifyItemChanged(position);
@@ -128,19 +127,30 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
 
         todosList.removeAll(todosList);
-        todosList.addAll(db.getAllNotes());
+        todosList.addAll(db.getAllTodos());
         mAdapter.notifyDataSetChanged();
         toggleEmptyGoals();
 
     }
 
-    private void toggleEmptyGoals() {
+    public void toggleEmptyGoals() {
 
 
-        if (db.getNotesCount() > 0) {
+        if (db.getTodosCount() > 0) {
+
             nogoalsTextView.setVisibility(View.GONE);
+            AppBarLayout.LayoutParams p = (AppBarLayout.LayoutParams) collapsingToolbar.getLayoutParams();
+            p.setScrollFlags(AppBarLayout.LayoutParams.SCROLL_FLAG_SCROLL| AppBarLayout.LayoutParams.SCROLL_FLAG_EXIT_UNTIL_COLLAPSED);
+            collapsingToolbar.setLayoutParams(p);
+
+
         } else {
+            AppBarLayout.LayoutParams p = (AppBarLayout.LayoutParams) collapsingToolbar.getLayoutParams();
+            p.setScrollFlags(AppBarLayout.LayoutParams.SCROLL_FLAG_SNAP);
+            collapsingToolbar.setLayoutParams(p);
+
             nogoalsTextView.setVisibility(View.VISIBLE);
+
         }
     }
 
@@ -151,6 +161,9 @@ public class MainActivity extends AppCompatActivity {
 
 
 }
+
+
+
 
 
 

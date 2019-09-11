@@ -29,7 +29,7 @@
                 android:value="com.arvindranjit.inspire.MainActivity" />
         </activity>
         <activity
-            android:name="com.arvindranjit.inspire.NoteDetails"
+            android:name="com.arvindranjit.inspire.Todo_Add"
             android:parentActivityName="com.arvindranjit.inspire.MainActivity" />
         <activity android:name="com.arvindranjit.inspire.MainActivity" >
             <intent-filter>

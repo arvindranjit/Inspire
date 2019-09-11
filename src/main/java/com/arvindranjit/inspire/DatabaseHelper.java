@@ -18,7 +18,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;
 
     // Database Name
-    private static final String DATABASE_NAME = "notes_db";
+    private static final String DATABASE_NAME = "todos_db";
 
 
     public DatabaseHelper(Context context) {
@@ -29,7 +29,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        // create notes table
+        // create todos table
         db.execSQL(Todo.CREATE_TABLE);
     }
 
@@ -100,7 +100,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
 
-    public List<Todo> getAllNotes() {
+    public List<Todo> getAllTodos() {
         List<Todo> todos = new ArrayList<>();
 
         // Select All Query
@@ -130,11 +130,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // close db connection
         db.close();
 
-        // return notes list
+        // return todos list
         return todos;
     }
 
-    public int getNotesCount() {
+    public int getTodosCount() {
         String countQuery = "SELECT  * FROM " + Todo.TABLE_NAME;
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(countQuery, null);

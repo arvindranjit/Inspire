@@ -1,4 +1,4 @@
-#Wed Sep 11 23:23:36 IST 2019
+#Thu Sep 12 00:27:36 IST 2019
 base.0=C\:\\Users\\arvin\\AndroidStudioProjects\\Inspire\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex
