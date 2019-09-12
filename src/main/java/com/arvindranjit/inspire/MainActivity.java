@@ -1,14 +1,18 @@
 package com.arvindranjit.inspire;
 
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.core.view.GravityCompat;
 import androidx.core.view.ViewCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -29,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private TextView nogoalsTextView;
     private  CollapsingToolbarLayout collapsingToolbar;
-
+    private DrawerLayout drawer;
     private DatabaseHelper db;
 
 
@@ -41,6 +45,9 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(null);
+
+
+
 
 
         collapsingToolbar =
@@ -55,11 +62,21 @@ public class MainActivity extends AppCompatActivity {
         nogoalsTextView = findViewById(R.id.nogoalstextview);
 
 
+
+        drawer = findViewById(R.id.drawer_layout);
+
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar,
+                R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
+
+
         db = new DatabaseHelper(this);
 
         todosList.addAll(db.getAllTodos());
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setColorFilter(Color.WHITE);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -70,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
 
         mAdapter = new RecyclerAdapter(this, todosList);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
@@ -91,6 +109,8 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onLongClick(View view, int position) {
+
+
 
 
                 Todo t = todosList.get(position);
@@ -155,7 +175,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
+    public void onBackPressed() {
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
+    }
 
 
 

@@ -34,7 +34,7 @@ public class Todo_Edit extends AppCompatActivity implements TimePickerDialog.OnT
     String bydatetime;
     String dateglobal;
 
-    int position;
+    int position,timeflago,dateflago;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,6 +78,8 @@ public class Todo_Edit extends AppCompatActivity implements TimePickerDialog.OnT
         difficultyedittext.setText(Integer.toString(difficulty));
 
 
+        dateflago = t.getDateflag();
+        timeflago = t.getTimeflag();
 
         bydatetime = t.getByTimestamp();
         dateglobal = bydatetime;
@@ -99,7 +101,11 @@ public class Todo_Edit extends AppCompatActivity implements TimePickerDialog.OnT
         c.set(Calendar.MONTH, mMonth);
         c.set(Calendar.DAY_OF_MONTH, mDay);
         String currentDateString = DateFormat.getDateInstance(DateFormat.FULL).format(c.getTime());
-        datetextview.setText(currentDateString);
+
+        if(timeflago==1){
+            datetextview.setText(currentDateString);
+        }
+
 
         String ap = "am";
 
@@ -118,7 +124,12 @@ public class Todo_Edit extends AppCompatActivity implements TimePickerDialog.OnT
 
 
         String time =  hoursint + ":" + minutes + " " + ap;
-        timetextview.setText(time);
+
+
+        if(timeflago==1){
+            timetextview.setText(time);
+        }
+
 
 
 
@@ -159,13 +170,17 @@ public class Todo_Edit extends AppCompatActivity implements TimePickerDialog.OnT
                 int difficultyint = 0;
 
 
+
                 String months = Integer.toString(mMonth);
                 String days = Integer.toString(mDay);
                 String years = Integer.toString(mYear);
                 String minutes = Integer.toString(mMinute);
                 String hours = Integer.toString(mHour);
 
-                mMonth = Integer.parseInt(months);
+
+
+
+                    mMonth = Integer.parseInt(months);
                 mDay = Integer.parseInt(days);
                 mYear = Integer.parseInt(years);
 
@@ -200,7 +215,23 @@ public class Todo_Edit extends AppCompatActivity implements TimePickerDialog.OnT
                 t.setLabel(labels);
 
 
-                t.setByTimestamp(datetime);
+                    if(timeflag==1){
+
+                        t.setByTimestamp(datetime);
+                        t.setTimeflag(1);
+
+                    } if(dateflag==1){
+
+                        if(timeflag==1){
+
+                            t.setByTimestamp(datetime);
+                            t.setDateflag(1);
+
+                        }
+                    }
+
+
+
                     difficultyint = 0;
                 t.setDifficulty(difficultyint);
 
@@ -286,6 +317,7 @@ public class Todo_Edit extends AppCompatActivity implements TimePickerDialog.OnT
         textView.setText(hourint + " : " + minutes + " " + ap);
 
         timeflag = 1;
+        Toast.makeText(getApplicationContext(), "Timeflag now 1", Toast.LENGTH_SHORT).show();
     }
 
 
@@ -303,6 +335,7 @@ public class Todo_Edit extends AppCompatActivity implements TimePickerDialog.OnT
         TextView textView = (TextView) findViewById(R.id.datetextview);
         textView.setText(currentDateString);
         dateflag = 1;
+        Toast.makeText(getApplicationContext(), "Dateflag now 1", Toast.LENGTH_SHORT).show();
     }
 
 

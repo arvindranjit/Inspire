@@ -72,38 +72,63 @@ public class Todo_Add extends AppCompatActivity implements TimePickerDialog.OnTi
 
 
 
-                String minutes = Integer.toString(mMinute);
-                String months = Integer.toString(mMonth);
-                String days = Integer.toString(mDay);
-                String hours = Integer.toString(mHour);
-                if(mMinute<10){
+                String months = "11";
+                String days = "22";
+                String hours = "22";
+                String minutes = "22";
+                String year = "2011";
 
-                    minutes = '0' +minutes;
+
+                if(dateflag==1){
+
+                    months = Integer.toString(mMonth);
+                    days = Integer.toString(mDay);
+                    year = Integer.toString(mYear);
+
+                    if(mMonth<10){
+
+                        months = '0' +months;
+
+                    }
+                    if(mDay<10){
+
+                        days = '0' +days;
+
+                    }
+
+
 
                 }
-                if(mMonth<10){
 
-                    months = '0' +months;
+                if(timeflag==1){
+                    hours = Integer.toString(mHour);
+                    minutes = Integer.toString(mMinute);
+
+                    if(mMinute<10){
+
+                        minutes = '0' +minutes;
+
+                    }
+                    if(mHour<10){
+
+                        hours = '0' +hours;
+
+                    }
 
                 }
-                if(mDay<10){
-
-                    days = '0' +days;
-
-                }
-                if(mHour<10){
-
-                    hours = '0' +hours;
-
-                }
 
 
 
 
-                if(timeflag==1 && dateflag==1 && !(labels.matches("")) ){
 
 
-                    String datetime = mYear + "-" + months + "-" + days + " " + hours + ":" + minutes;
+
+
+
+                if(!(labels.matches("")) ){
+
+
+                    String datetime = year + "-" + months + "-" + days + " " + hours + ":" + minutes;
 
 
                     Random r = new Random();
@@ -112,7 +137,7 @@ public class Todo_Add extends AppCompatActivity implements TimePickerDialog.OnTi
                     int difficultyint = 0;
 
 
-                    long id = db.insertTodo(labels,datetime,difficultyint,color1,color2);
+                    long id = db.insertTodo(labels,datetime,difficultyint,color1,color2,dateflag,timeflag);
 
 
 
@@ -123,7 +148,7 @@ public class Todo_Add extends AppCompatActivity implements TimePickerDialog.OnTi
 
                 } else{
 
-                    Toast.makeText(getApplicationContext(),"Please enter all fields",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Please enter label",Toast.LENGTH_SHORT).show();
                 }
 
 
@@ -147,6 +172,7 @@ public class Todo_Add extends AppCompatActivity implements TimePickerDialog.OnTi
         TextView textView = (TextView) findViewById(R.id.timetextview);
         mMinute= minute;
         mHour = hourOfDay;
+        int hour = mHour;
         String ap = "am";
 
         if(mHour>11){
@@ -154,11 +180,11 @@ public class Todo_Add extends AppCompatActivity implements TimePickerDialog.OnTi
             ap = "pm";
 
             if(mHour>12){
-                mHour = mHour - 12;
+                hour = hour - 12;
             }
         } else if(mHour == 0){
 
-            mHour = 12;
+            hour = 12;
         }
         String minutes = Integer.toString(minute);
         if(minute<10){
@@ -167,7 +193,7 @@ public class Todo_Add extends AppCompatActivity implements TimePickerDialog.OnTi
 
         }
 
-        textView.setText(mHour + ":" + minutes + " " + ap);
+        textView.setText(hour + ":" + minutes + " " + ap);
         timeflag = 1;
     }
 
@@ -190,9 +216,7 @@ public class Todo_Add extends AppCompatActivity implements TimePickerDialog.OnTi
 
 
 
-    private void createTodo(String todo) {
 
-    }
 
 
 

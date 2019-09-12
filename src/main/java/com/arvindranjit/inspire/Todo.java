@@ -13,6 +13,8 @@ public class Todo {
     public static final String COLUMN_TIMESTAMP = "timestamp";
     public static final String COLUMN_COLOR1 = "color1";
     public static final String COLUMN_COLOR2 = "color2";
+    public static final String COLUMN_DATEFLAG = "dateflag";
+    public static final String COLUMN_TIMEFLAG = "timeflag";
 
     private int id;
     private String label;
@@ -22,6 +24,8 @@ public class Todo {
     private int difficulty;
     private int color1;
     private int color2;
+    private int timeflag;
+    private int dateflag;
 
 
 
@@ -36,13 +40,15 @@ public class Todo {
                     + COLUMN_DIFFICULTY + " INTEGER,"
                     + COLUMN_STATUS + " INTEGER,"
                     + COLUMN_COLOR1 + " INTEGER,"
-                    + COLUMN_COLOR2 + " INTEGER"
+                    + COLUMN_COLOR2+ " INTEGER,"
+                    + COLUMN_DATEFLAG + " INTEGER,"
+                    + COLUMN_TIMEFLAG + " INTEGER"
                     + ")";
 
     public Todo() {
     }
 
-    public Todo(int id, String label, String timestamp, String bytimestamp, int difficulty, int status,int color1, int color2) {
+    public Todo(int id, String label, String timestamp, String bytimestamp, int difficulty, int status,int color1, int color2,int dateflag, int timeflag) {
         this.id = id;
         this.label = label;
         this.timestamp = timestamp;
@@ -51,6 +57,8 @@ public class Todo {
         this.status = status;
         this.color1 = color1;
         this.color2 = color2;
+        this.dateflag = dateflag;
+        this.timeflag = timeflag;
     }
 
     public int getId() {
@@ -79,6 +87,12 @@ public class Todo {
     public int getcolor2() {
         return color2;
     }
+    public int getTimeflag() {
+        return timeflag;
+    }
+    public int getDateflag() {
+        return dateflag;
+    }
 
 
 
@@ -106,6 +120,12 @@ public class Todo {
     }
     public void setcolor2(int color2) {
         this.color2 = color2;
+    }
+    public void setTimeflag(int timeflag) {
+        this.timeflag = timeflag;
+    }
+    public void setDateflag(int dateflag) {
+        this.dateflag = dateflag;
     }
 
 

@@ -252,6 +252,10 @@
         "source": "C:\\Users\\arvin\\.gradle\\caches\\transforms-2\\files-2.1\\a8c03165c69018fbda4f77f1eb58f4bb\\appcompat-1.1.0-rc01\\res\\drawable-v21\\abc_btn_colored_material.xml"
     },
     {
+        "merged": "C:\\Users\\arvin\\AndroidStudioProjects\\Inspire\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_cancel.xml.flat",
+        "source": "C:\\Users\\arvin\\AndroidStudioProjects\\Inspire\\app\\src\\main\\res\\drawable\\ic_cancel.xml"
+    },
+    {
         "merged": "C:\\Users\\arvin\\AndroidStudioProjects\\Inspire\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_focused_holo.9.png.flat",
         "source": "C:\\Users\\arvin\\.gradle\\caches\\transforms-2\\files-2.1\\a8c03165c69018fbda4f77f1eb58f4bb\\appcompat-1.1.0-rc01\\res\\drawable-hdpi-v4\\abc_list_focused_holo.9.png"
     },
@@ -928,12 +932,12 @@
         "source": "C:\\Users\\arvin\\.gradle\\caches\\transforms-2\\files-2.1\\d23ca375c576c4f77f42c729153a7f8a\\core-1.1.0-rc02\\res\\drawable\\notification_tile_bg.xml"
     },
     {
-        "merged": "C:\\Users\\arvin\\AndroidStudioProjects\\Inspire\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_bottom_navigation_item.xml.flat",
-        "source": "C:\\Users\\arvin\\.gradle\\caches\\transforms-2\\files-2.1\\5488c81610655eccbe4589ddb707dc5f\\material-1.1.0-alpha09\\res\\layout\\design_bottom_navigation_item.xml"
-    },
-    {
         "merged": "C:\\Users\\arvin\\AndroidStudioProjects\\Inspire\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_todo_add.xml.flat",
         "source": "C:\\Users\\arvin\\AndroidStudioProjects\\Inspire\\app\\src\\main\\res\\layout\\activity_todo_add.xml"
+    },
+    {
+        "merged": "C:\\Users\\arvin\\AndroidStudioProjects\\Inspire\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_bottom_navigation_item.xml.flat",
+        "source": "C:\\Users\\arvin\\.gradle\\caches\\transforms-2\\files-2.1\\5488c81610655eccbe4589ddb707dc5f\\material-1.1.0-alpha09\\res\\layout\\design_bottom_navigation_item.xml"
     },
     {
         "merged": "C:\\Users\\arvin\\AndroidStudioProjects\\Inspire\\app\\build\\intermediates\\res\\merged\\debug\\anim_btn_radio_to_on_mtrl_ring_outer_path_animation.xml.flat",
@@ -946,6 +950,10 @@
     {
         "merged": "C:\\Users\\arvin\\AndroidStudioProjects\\Inspire\\app\\build\\intermediates\\res\\merged\\debug\\animator_mtrl_extended_fab_extend_motion_spec.xml.flat",
         "source": "C:\\Users\\arvin\\.gradle\\caches\\transforms-2\\files-2.1\\5488c81610655eccbe4589ddb707dc5f\\material-1.1.0-alpha09\\res\\animator\\mtrl_extended_fab_extend_motion_spec.xml"
+    },
+    {
+        "merged": "C:\\Users\\arvin\\AndroidStudioProjects\\Inspire\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_check.xml.flat",
+        "source": "C:\\Users\\arvin\\AndroidStudioProjects\\Inspire\\app\\src\\main\\res\\drawable\\ic_check.xml"
     },
     {
         "merged": "C:\\Users\\arvin\\AndroidStudioProjects\\Inspire\\app\\build\\intermediates\\res\\merged\\debug\\anim_btn_radio_to_on_mtrl_dot_group_animation.xml.flat",
@@ -1464,12 +1472,20 @@
         "source": "C:\\Users\\arvin\\.gradle\\caches\\transforms-2\\files-2.1\\a8c03165c69018fbda4f77f1eb58f4bb\\appcompat-1.1.0-rc01\\res\\drawable\\abc_btn_radio_material.xml"
     },
     {
+        "merged": "C:\\Users\\arvin\\AndroidStudioProjects\\Inspire\\app\\build\\intermediates\\res\\merged\\debug\\drawable_navdrawer.jpg.flat",
+        "source": "C:\\Users\\arvin\\AndroidStudioProjects\\Inspire\\app\\src\\main\\res\\drawable\\navdrawer.jpg"
+    },
+    {
         "merged": "C:\\Users\\arvin\\AndroidStudioProjects\\Inspire\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
         "source": "C:\\Users\\arvin\\.gradle\\caches\\transforms-2\\files-2.1\\a8c03165c69018fbda4f77f1eb58f4bb\\appcompat-1.1.0-rc01\\res\\drawable-xxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
         "merged": "C:\\Users\\arvin\\AndroidStudioProjects\\Inspire\\app\\build\\intermediates\\res\\merged\\debug\\layout_test_action_chip.xml.flat",
         "source": "C:\\Users\\arvin\\.gradle\\caches\\transforms-2\\files-2.1\\5488c81610655eccbe4589ddb707dc5f\\material-1.1.0-alpha09\\res\\layout\\test_action_chip.xml"
+    },
+    {
+        "merged": "C:\\Users\\arvin\\AndroidStudioProjects\\Inspire\\app\\build\\intermediates\\res\\merged\\debug\\layout_completed_failed_dialog.xml.flat",
+        "source": "C:\\Users\\arvin\\AndroidStudioProjects\\Inspire\\app\\src\\main\\res\\layout\\completed_failed_dialog.xml"
     },
     {
         "merged": "C:\\Users\\arvin\\AndroidStudioProjects\\Inspire\\app\\build\\intermediates\\res\\merged\\debug\\layout_text_view_with_theme_line_height.xml.flat",
@@ -1638,6 +1654,10 @@
     {
         "merged": "C:\\Users\\arvin\\AndroidStudioProjects\\Inspire\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
         "source": "C:\\Users\\arvin\\.gradle\\caches\\transforms-2\\files-2.1\\a8c03165c69018fbda4f77f1eb58f4bb\\appcompat-1.1.0-rc01\\res\\drawable-hdpi-v4\\abc_popup_background_mtrl_mult.9.png"
+    },
+    {
+        "merged": "C:\\Users\\arvin\\AndroidStudioProjects\\Inspire\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_settings.xml.flat",
+        "source": "C:\\Users\\arvin\\AndroidStudioProjects\\Inspire\\app\\src\\main\\res\\drawable\\ic_settings.xml"
     },
     {
         "merged": "C:\\Users\\arvin\\AndroidStudioProjects\\Inspire\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_black_16dp.png.flat",
@@ -1844,6 +1864,10 @@
         "source": "C:\\Users\\arvin\\.gradle\\caches\\transforms-2\\files-2.1\\5488c81610655eccbe4589ddb707dc5f\\material-1.1.0-alpha09\\res\\layout\\design_layout_snackbar_include.xml"
     },
     {
+        "merged": "C:\\Users\\arvin\\AndroidStudioProjects\\Inspire\\app\\build\\intermediates\\res\\merged\\debug\\menu_drawer_menu.xml.flat",
+        "source": "C:\\Users\\arvin\\AndroidStudioProjects\\Inspire\\app\\src\\main\\res\\menu\\drawer_menu.xml"
+    },
+    {
         "merged": "C:\\Users\\arvin\\AndroidStudioProjects\\Inspire\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\arvin\\AndroidStudioProjects\\Inspire\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
@@ -1962,6 +1986,10 @@
     {
         "merged": "C:\\Users\\arvin\\AndroidStudioProjects\\Inspire\\app\\build\\intermediates\\res\\merged\\debug\\layout_mtrl_picker_header_fullscreen.xml.flat",
         "source": "C:\\Users\\arvin\\.gradle\\caches\\transforms-2\\files-2.1\\5488c81610655eccbe4589ddb707dc5f\\material-1.1.0-alpha09\\res\\layout\\mtrl_picker_header_fullscreen.xml"
+    },
+    {
+        "merged": "C:\\Users\\arvin\\AndroidStudioProjects\\Inspire\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_flag.xml.flat",
+        "source": "C:\\Users\\arvin\\AndroidStudioProjects\\Inspire\\app\\src\\main\\res\\drawable\\ic_flag.xml"
     },
     {
         "merged": "C:\\Users\\arvin\\AndroidStudioProjects\\Inspire\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_select_dialog_material.xml.flat",
@@ -2382,5 +2410,9 @@
     {
         "merged": "C:\\Users\\arvin\\AndroidStudioProjects\\Inspire\\app\\build\\intermediates\\res\\merged\\debug\\color-v23_abc_btn_colored_borderless_text_material.xml.flat",
         "source": "C:\\Users\\arvin\\.gradle\\caches\\transforms-2\\files-2.1\\a8c03165c69018fbda4f77f1eb58f4bb\\appcompat-1.1.0-rc01\\res\\color-v23\\abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\arvin\\AndroidStudioProjects\\Inspire\\app\\build\\intermediates\\res\\merged\\debug\\layout_nav_header.xml.flat",
+        "source": "C:\\Users\\arvin\\AndroidStudioProjects\\Inspire\\app\\src\\main\\res\\layout\\nav_header.xml"
     }
 ]

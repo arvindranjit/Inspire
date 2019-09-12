@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -21,23 +22,25 @@ import java.util.Date;
 import java.util.List;
 import com.arvindranjit.inspire.Todo;
 
+import static android.view.View.GONE;
+
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyViewHolder> {
 
     private Context context;
+
     private List<Todo> todosList;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView todo;
-        public TextView timestamp;
-        public TextView datestamp;
+        public TextView timedatestamp;
         public CardView cardview;
         public ConstraintLayout constraintLayout;
 
         public MyViewHolder(View view) {
             super(view);
             todo = view.findViewById(R.id.label);
-            timestamp = view.findViewById(R.id.timestamp);
-            datestamp = view.findViewById(R.id.datestamp);
+            timedatestamp = view.findViewById(R.id.timedatestamp);
+
             cardview = view.findViewById(R.id.cardview);
             constraintLayout = view.findViewById(R.id.constraintLayout3);
         }
@@ -72,6 +75,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
         String hours = bydatetime.substring(11,13);
         String minutes = bydatetime.substring(14,16);
         int colour = todo.getcolor1();
+        int timeflag = todo.getTimeflag();
+        int dateflag = todo.getDateflag();
 
 
       int yearsint = Integer.parseInt(years);
@@ -95,7 +100,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
         }
 
 
-        String time = "Due by " + hoursint + ":" + minutes + " " + ap;
+        String time = hoursint + ":" + minutes + " " + ap;
 
 
 
@@ -108,12 +113,37 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
 
 
         if(todo.getStatus()==0) {
-            holder.timestamp.setText(time);
-            holder.datestamp.setText(currentDateString);
+
+            if(dateflag==1 && timeflag==1){
+                holder.timedatestamp.setText("Due by " + time + "\n" + currentDateString);
+
+
+            } else if(timeflag==1 && dateflag==0){
+
+                holder.timedatestamp.setText("Due by " + time);
+
+
+
+
+            } else if(timeflag==0 && dateflag==1){
+
+                holder.timedatestamp.setText("Due by " + currentDateString);
+
+
+            } else{
+
+                holder.timedatestamp.setText("");
+
+
+
+            }
+
+
+
         } else {
 
-            holder.timestamp.setText("Completed");
-            holder.datestamp.setText("");
+            holder.timedatestamp.setText("Completed");
+
         }
 
 
@@ -131,23 +161,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
             holder.constraintLayout.setBackgroundColor(colour1);
 
         }
-
-
-
-
-       /* GradientDrawable gd2 = new GradientDrawable(
-                GradientDrawable.Orientation.TOP_BOTTOM,
-                new int[] {gColors[0], gColors[1]});
-        gd2.setCornerRadius(100); */
-
-
-
-
-
-
-
-
-
 
 
 

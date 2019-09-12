@@ -43,7 +43,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public long insertTodo(String label, String DateTime, int Difficulty, int color1, int color2) {
+    public long insertTodo(String label, String DateTime, int Difficulty, int color1, int color2, int dateflag, int timeflag) {
         // get writable database as we want to write data
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -56,6 +56,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(Todo.COLUMN_STATUS, 0);
         values.put(Todo.COLUMN_COLOR1, color1);
         values.put(Todo.COLUMN_COLOR2, color2);
+        values.put(Todo.COLUMN_DATEFLAG, dateflag);
+        values.put(Todo.COLUMN_TIMEFLAG, timeflag);
 
         // insert row
         long id = db.insert(Todo.TABLE_NAME, null, values);
@@ -72,7 +74,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
 
         Cursor cursor = db.query(Todo.TABLE_NAME,
-                new String[]{Todo.COLUMN_ID, Todo.COLUMN_LABEL, Todo.COLUMN_TIMESTAMP, Todo.COLUMN_BYTIMESTAMP, Todo.COLUMN_DIFFICULTY, Todo.COLUMN_STATUS, Todo.COLUMN_COLOR1, Todo.COLUMN_COLOR2},
+                new String[]{Todo.COLUMN_ID, Todo.COLUMN_LABEL, Todo.COLUMN_TIMESTAMP, Todo.COLUMN_BYTIMESTAMP, Todo.COLUMN_DIFFICULTY, Todo.COLUMN_STATUS, Todo.COLUMN_COLOR1, Todo.COLUMN_COLOR2, Todo.COLUMN_DATEFLAG, Todo.COLUMN_TIMEFLAG},
                 Todo.COLUMN_ID + "=?",
                 new String[]{String.valueOf(id)}, null, null, null, null);
 
@@ -88,7 +90,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 cursor.getInt(cursor.getColumnIndex(Todo.COLUMN_DIFFICULTY)),
                 cursor.getInt(cursor.getColumnIndex(Todo.COLUMN_STATUS)),
                 cursor.getInt(cursor.getColumnIndex(Todo.COLUMN_COLOR1)),
-                cursor.getInt(cursor.getColumnIndex(Todo.COLUMN_COLOR2))
+                cursor.getInt(cursor.getColumnIndex(Todo.COLUMN_COLOR2)),
+                cursor.getInt(cursor.getColumnIndex(Todo.COLUMN_DATEFLAG)),
+                cursor.getInt(cursor.getColumnIndex(Todo.COLUMN_TIMEFLAG))
 
         );
 
@@ -122,6 +126,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 todo.setStatus(cursor.getInt(cursor.getColumnIndex(Todo.COLUMN_STATUS)));
                 todo.setcolor1(cursor.getInt(cursor.getColumnIndex(Todo.COLUMN_COLOR1)));
                 todo.setcolor2(cursor.getInt(cursor.getColumnIndex(Todo.COLUMN_COLOR2)));
+                todo.setDateflag(cursor.getInt(cursor.getColumnIndex(Todo.COLUMN_DATEFLAG)));
+                todo.setTimeflag(cursor.getInt(cursor.getColumnIndex(Todo.COLUMN_TIMEFLAG)));
 
                 todos.add(todo);
             } while (cursor.moveToNext());
@@ -155,6 +161,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(Todo.COLUMN_BYTIMESTAMP, todo.getByTimestamp());
         values.put(Todo.COLUMN_DIFFICULTY, todo.getDifficulty());
         values.put(Todo.COLUMN_STATUS, todo.getStatus());
+        values.put(Todo.COLUMN_DATEFLAG, todo.getDateflag());
+        values.put(Todo.COLUMN_TIMEFLAG, todo.getTimeflag());
 
 
         // updating row

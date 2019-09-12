@@ -1345,8 +1345,11 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable ic_add_black_24dp
 drawable ic_calendar_black_24dp
+drawable ic_cancel
+drawable ic_check
 drawable ic_clear_black_24dp
 drawable ic_edit_black_24dp
+drawable ic_flag
 drawable ic_keyboard_arrow_left_black_24dp
 drawable ic_keyboard_arrow_right_black_24dp
 drawable ic_launcher_background
@@ -1357,6 +1360,7 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_settings
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
 drawable mtrl_ic_arrow_drop_down
@@ -1366,6 +1370,7 @@ drawable mtrl_ic_error
 drawable mtrl_popupmenu_background
 drawable mtrl_popupmenu_background_dark
 drawable mtrl_tabs_default_indicator
+drawable navdrawer
 drawable navigation_empty_icon
 drawable notification_action_background
 drawable notification_bg
@@ -1475,6 +1480,7 @@ id clip_horizontal
 id clip_vertical
 id collapseActionView
 id collapsing_toolbar
+id completed
 id confirm_button
 id constraintLayout
 id constraintLayout2
@@ -1489,7 +1495,6 @@ id customPanel
 id cut
 id date_picker_actions
 id datebtn
-id datestamp
 id datetextview
 id decor_content_parent
 id default_activity_button
@@ -1505,6 +1510,7 @@ id difficultyTextInputLayout
 id dimensions
 id direct
 id disableHome
+id drawer_layout
 id dropdown_menu
 id edit_query
 id end
@@ -1515,6 +1521,7 @@ id expand_activities_button
 id expanded_menu
 id fab
 id fade
+id failed
 id fill
 id fill_horizontal
 id fill_vertical
@@ -1527,6 +1534,8 @@ id ghost_view
 id gone
 id group_divider
 id groups
+id grp1
+id grp2
 id hideable
 id home
 id homeAsUp
@@ -1578,7 +1587,13 @@ id mtrl_picker_text_input_range_end
 id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id multiply
+id nav_completed
+id nav_failed
+id nav_goals
+id nav_settings
+id nav_view
 id navigation_header_container
+id nestedScrollView
 id never
 id noScroll
 id nogoalstextview
@@ -1675,7 +1690,7 @@ id textinput_error
 id textinput_helper_text
 id time
 id timebtn
-id timestamp
+id timedatestamp
 id timetextview
 id title
 id titleDividerNoCustom
@@ -1763,6 +1778,7 @@ layout abc_tooltip
 layout activity_main
 layout activity_todo__edit
 layout activity_todo_add
+layout completed_failed_dialog
 layout content_main
 layout content_todo__edit
 layout custom_dialog
@@ -1809,6 +1825,7 @@ layout mtrl_picker_header_title_text
 layout mtrl_picker_header_toggle
 layout mtrl_picker_text_input_date
 layout mtrl_picker_text_input_date_range
+layout nav_header
 layout notification_action
 layout notification_action_tombstone
 layout notification_template_custom_big
@@ -1831,6 +1848,7 @@ layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
 layout todo_list_row
+menu drawer_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
@@ -1876,11 +1894,7 @@ string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string hide_bottom_view_on_scroll_behavior
-string hint_enter_note
 string icon_content_description
-string lbl_edit_note_title
-string lbl_new_note_title
-string msg_no_notes
 string mtrl_badge_numberless_content_description
 string mtrl_chip_close_icon_content_description
 string mtrl_exceed_max_badge_number_suffix
@@ -1904,6 +1918,8 @@ string mtrl_picker_text_input_date_format
 string mtrl_picker_text_input_date_hint
 string mtrl_picker_text_input_date_range_end_hint
 string mtrl_picker_text_input_date_range_start_hint
+string navigation_drawer_close
+string navigation_drawer_open
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through

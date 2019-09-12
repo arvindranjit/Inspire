@@ -20,7 +20,9 @@
         app:layout_constraintTop_toTopOf="parent">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="120dp"
+
+
             android:id="@+id/constraintLayout3">
 
 
@@ -37,33 +39,35 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/timestamp"
+                android:id="@+id/timedatestamp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
                 android:layout_marginTop="32dp"
-                android:layout_marginEnd="8dp"
-                android:textColor="#ffffff"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
                 android:text="Due by 6:03 pm"
-                android:textSize="15sp"
-                app:layout_constraintBottom_toTopOf="@+id/datestamp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/label" />
-
-            <TextView
-                android:id="@+id/datestamp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right"
+                android:gravity="right"
                 android:textColor="#ffffff"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"
-                android:text="Friday, September 6 2019"
                 android:textSize="15sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/label"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintTop_toBottomOf="@+id/label" />
+
+<!--            <TextView-->
+<!--                android:id="@+id/datestamp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="right"-->
+<!--                android:textColor="#ffffff"-->
+<!--                android:layout_marginEnd="8dp"-->
+<!--                android:layout_marginBottom="8dp"-->
+<!--                android:text="Friday, September 6 2019"-->
+<!--                android:textSize="15sp"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/label"-->
+<!--                app:layout_constraintVertical_bias="1.0" />-->
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
